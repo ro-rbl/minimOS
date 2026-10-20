@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <span class="os-title">🚀 CoreOS v5.0</span>
+        <span class="system-clock" id="clock">00/00/0000 00:00:00 AM</span>
+    </header>
+
+    <main id="desktop-grid">
+        <div id="icon-welcome" class="desktop-icon" onclick="handleIconTap(this, 'welcome')">
+            <span class="icon-graphic">📁</span>
+            <span>Welcome OS</span>
+        </div>
+
+        <div id="icon-car" class="desktop-icon" onclick="handleIconTap(this, 'car-app')">
+            <span class="icon-graphic">🏎️</span>
+            <span>Car Garage</span>
+        </div>
+
+        <div id="icon-plane" class="desktop-icon" onclick="handleIconTap(this, 'plane-app')">
+            <span class="icon-graphic">✈️</span>
+            <span>Radar App</span>
+        </div>
+    </main>
+
+    <div id="welcome" class="os-window">
+        <div id="welcomeheader" class="window-header">
+            <span>⚙️ system_welcome.exe</span>
+            <button class="close-btn" onclick="closeWindow('welcome')">[X]</button>
+        </div>
+        <div class="window-body">
+            <h1>&gt;_ Welcome to my OS</h1>
+            <h2>[System.Introduction]</h2>
+            <p>Hello world! Booting up core protocols and loading personal archives...</p>
+            <img class="terminal-img" src="./IMG_7702 copy.JPG" alt="OS Asset Visual Placeholder" />
+            <br><br>
+            <a class="btn" href="https://chevrolet.com" target="_blank">Launch Corvette Protocol</a>
+        </div>
+    </div>
+
+    <div id="car-app" class="os-window" style="display: none; top: 30%; left: 45%;">
+        <div id="car-appheader" class="window-header">
+            <span>🏎️ corvette_spec_manager.exe</span>
+            <button class="close-btn" onclick="closeWindow('car-app')">[X]</button>
+        </div>
+        <div class="window-body">
+            <h1>&gt;_ Corvette Garage</h1>
+            <h2>[Vehicle.Database]</h2>
+            <p>Track your dream performance builds and engine calibrations here.</p>
+            <div class="app-card">
+                <h3>Chevrolet Corvette Stingray</h3>
+                <ul>
+                    <li><strong>Engine:</strong> 6.2L V8 DI LT2</li>
+                    <li><strong>Horsepower:</strong> 495 hp</li>
+                    <li><strong>0-60 mph:</strong> 2.9 seconds</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="plane-app" class="os-window" style="display: none; top: 35%; left: 50%;">
+        <div id="plane-appheader" class="window-header">
+            <span>✈️ airspace_radar_monitor.exe</span>
+            <button class="close-btn" onclick="closeWindow('plane-app')">[X]</button>
+        </div>
+        <div class="window-body">
+            <h1>&gt;_ Airspace Radar</h1>
+            <h2>[Aviation.Telemetry]</h2>
+            <p>Live active commercial tracking logs and vector transponder data.</p>
+            <div class="app-card">
+                <h3>Flight AA-2409</h3>
+                <ul>
+                    <li><strong>Aircraft:</strong> Boeing 787-9 Dreamliner</li>
+                    <li><strong>Altitude:</strong> 36,000 ft</li>
+                    <li><strong>Speed:</strong> 512 knots</li>
+                    <li><strong>Route:</strong> ORD &rarr; LHR</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
