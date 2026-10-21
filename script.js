@@ -59,4 +59,12 @@ function dragElement(el) {
         document.onmouseup = null;
         document.onmousemove = null;
     }
+
+    function triggerSystemAlert() {
+        const win = document.getElementById('welcome');
+        win.classList.add('glitch-mode');
+        setTimeout(() => {
+            win.classList.remove('glitch-mode');
+        }, 4000);
+    }
 }
